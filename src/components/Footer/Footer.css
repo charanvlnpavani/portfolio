@@ -1,0 +1,10 @@
+.footerMain {
+  width: 100vw;
+  height: 30vh;
+  margin: auto;
+}
+.footer {
+  width: 85%;
+  height: 10vh;
+  align-items: center;
+}

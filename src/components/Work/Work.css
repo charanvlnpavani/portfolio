@@ -1,0 +1,24 @@
+.workMain {
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
+    url("/work.jpg"); /* Absolute path from the public folder */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.work {
+  margin: auto;
+  text-align: center;
+}
+.exp,
+.pro,
+.blog {
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
+    url("/logo.jpg"); /* Absolute path from the public folder */
+  background-repeat: no-repeat;
+  background-size: cover;
+}

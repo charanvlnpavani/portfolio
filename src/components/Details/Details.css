@@ -1,0 +1,15 @@
+.details {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.332), rgba(0, 0, 0, 0.712)),
+    url("/img2.png"); /* Absolute path from the public folder */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.contentDetails {
+  width: 85%;
+  height: 100vh;
+  margin: auto;
+}

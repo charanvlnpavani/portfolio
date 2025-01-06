@@ -1,0 +1,19 @@
+.selfMain {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
+    url("/about.jpg"); /* Absolute path from the public folder */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #fff;
+}
+.self {
+  border-radius: 5px;
+  margin: auto;
+  align-content: center;
+  position: relative;
+}
