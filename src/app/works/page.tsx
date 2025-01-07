@@ -3,7 +3,7 @@ import {  experience, project, substackBlogs } from "@/utils/actionList";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const pages = () => {
+const Pages = () => {
   const [showAll, setShowAll] = useState(false);
   const [showBlogAll, setBlogAll] = useState(false);
   const toggleShowAll = () => setShowAll(!showAll);
@@ -149,4 +149,4 @@ const pages = () => {
     </div>
   );
 };
-export default pages;
+export default Pages;
