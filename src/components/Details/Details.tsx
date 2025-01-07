@@ -2,7 +2,7 @@
 import { buttonList } from "@/utils/actionList";
 import React, { useState } from "react";
 import Link from "next/link";
-
+import { downloadResume } from "@/utils/download";
 import "./Details.css";
 import { RiUserLocationLine } from "react-icons/ri";
 import {
@@ -19,6 +19,11 @@ const Details = () => {
     if (hour < 18) return "Good afternoon";
     return "Good evening";
   };
+  const handleDownload = () => {
+    downloadResume();
+    setDownload(true); // Update state after download
+  };
+
   return (
     <div className="details flex flex-col gap-10 px-100 pt-72 mt-24 md:mt-0 md:pt-72  md:h-[100vh]  h-[85vh]  ">
       <div className="contentDetails text-right flex flex-col gap-3 md:flex md:flex-col md:gap-8">
@@ -37,7 +42,7 @@ const Details = () => {
             <button
               type="button"
               className="cvButton border flex flex-row gap-3 justify-end flex-end place-items-end  border-orange-700 px-10 py-2 bg-orange-700 md:bg-orange-700 md:hover:bg-orange-800 md:hover:border-orange-800  md:text-white md:px-20 md:py-2 "
-              onClick={() => setDownload(true)}
+              onClick={handleDownload}
             >
               <MdOutlineFileDownload className="text-2xl" />
               CV
@@ -46,7 +51,7 @@ const Details = () => {
             <button
               type="button"
               className="cvButton border flex flex-row gap-3 justify-end flex-end place-items-end  border-green-700 px-10 py-2 bg-green-700 md:bg-green-700 md:text-white md:px-20 md:py-2"
-              onClick={() => setDownload(true)}
+              onClick={handleDownload}
             >
               <MdOutlineFileDownloadDone className="text-2xl" />
               CV
