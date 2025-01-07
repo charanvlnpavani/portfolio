@@ -1,3 +1,4 @@
+import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsPersonWorkspace, BsBootstrap, BsTwitterX } from "react-icons/bs";
@@ -89,7 +90,7 @@ export const workList: workList = [
 
 type aboutMe = {
   name: string;
-  content: string;
+  content: ReactNode;
   image: string;
   role: string;
 }[];
@@ -99,7 +100,7 @@ export const aboutMe: aboutMe = [
     name: "Pavani VLN Charan",
     content: (
       <>
-        I living in <b> Bangalore</b>. I'm a passionate{" "}
+        I living in <b> Bangalore</b>. I am a passionate{" "}
         <b> Frontend Developer </b>with over <b>2 years of experience </b>
         specializing in <b>React.js, JavaScript, and modern web technologies</b>
         . My journey in web development began with a <b>strong foundation</b> in
