@@ -1,5 +1,5 @@
 "use client";
-import { blog, experience, project } from "@/utils/actionList";
+import {  experience, project, substackBlogs } from "@/utils/actionList";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -96,41 +96,46 @@ const pages = () => {
           </button>
         </div>
       </div>
+
       <div
-        className="status w- h-full mt-10 px-10 py-10 top-20 md:w-[80%] md:m-32 md:p-10 border text-black m-auto"
+        className="status w-full h-full mt-10 px-10 py-10 top-20 md:w-[80%] md:m-32 md:p-10 border text-black m-auto"
         id="blog"
       >
         <h1 className="text-4xl font-bold text-center mb-5 text-gray-800">
-          My Blogs
+          My Substack Posts
         </h1>
-        <hr className=" substack-post-embed w-full h-[2px] bg-gray-300 mb-8" />
+        <hr className="substack-post-embed w-full h-[2px] bg-gray-300 mb-8" />
         <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] h-auto py-10">
-          {(showAll ? blog : blog.slice(0, 5)).map((item, index) => (
-            <div
-              className="status-item bg-white shadow-lg hover:shadow-2xl rounded p-4 transition-all duration-300 ease-in-out flex flex-col items-center justify-center"
-              key={index}
-            >
-              <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                <h3 className="text-white text-xl font-bold">
-                  {item.name.charAt(0)}
-                </h3>
-              </div>
-              <h2 className="text-xl font-semibold text-gray-700 text-center">
-                {item.name}
-              </h2>
-              <p className="text-gray-600 text-sm text-center mb-4">
-                {item.description}
-              </p>
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-blue-600 hover:text-blue-800 underline"
+          {(showBlogAll ? substackBlogs : substackBlogs.slice(0, 3)).map(
+            (blog, index) => (
+              <div
+                key={index}
+                className="status-item bg-white shadow-lg hover:shadow-2xl rounded-lg p-6 transition duration-300 ease-in-out flex flex-col gap-5"
               >
-                View Blog
-              </a>
-            </div>
-          ))}
+                <h2 className="text-2xl font-semibold text-center text-gray-700">
+                  {blog.title}
+                </h2>
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  width={300}
+                  height={200}
+                  className="rounded-lg w-full h-[200px] object-contain"
+                />
+                <p className="text-gray-600 text-sm text-justify mb-4">
+                  {blog.description}
+                </p>
+                <a
+                  href={blog.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-center py-2.5 px-5 text-blue-600 hover:text-blue-800 underline"
+                >
+                  Read on Substack
+                </a>
+              </div>
+            )
+          )}
         </div>
         <div className="text-center mt-8">
           <button

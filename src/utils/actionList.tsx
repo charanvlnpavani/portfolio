@@ -174,17 +174,31 @@ export const project: project = [
   },
 ];
 
-type blogs = {
-  name: string;
+type substackBlogs = {
+  title: string;
   description: string;
   link: string;
+  image: string;
 }[];
 
-export const blog: blogs = [
+export const substackBlogs = [
   {
-    name: "Browser Object Model (BOM)",
+    title: "Diffing Algorithm ",
+    description: "Understand How Virtual DOM decides before Updating Real DOM",
+    link: "https://advancedwebdev.substack.com/p/diffing-algorithm-for-react-devs",
+    image: "/substackImage/1.webp", // Replace with your image path or URL
+  },
+  {
+    title: "Intro to Virtual DOM ",
+    description: "Do you know JSX is converted before showing up in web page?",
+    link: "https://advancedwebdev.substack.com/p/intro-to-virtual-dom-for-react-devs",
+    image: "/substackImage/3.webp", // Replace with your image path or URL
+  },
+  {
+    title: "Introduction of BOM ",
     description:
-      "The Browser Object Model (BOM) allows JavaScript to communicate with the browser.",
+      'The Browser Object Model (BOM) allows JavaScript to "communicate with" the browser.',
     link: "https://advancedwebdev.substack.com/p/introduction-of-bom-browser-object",
+    image: "/substackImage/3.jpg", // Replace with your image path or URL
   },
 ];
