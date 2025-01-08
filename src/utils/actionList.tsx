@@ -117,7 +117,7 @@ export const aboutMe: aboutMe = [
         <b> innovative projects</b> that drive user engagement and success.
       </>
     ),
-    image: "/logo.jpg",
+    image: "/logo.webp",
     role: "Frontend Developer",
   },
 ];
@@ -157,14 +157,14 @@ export const project: project = [
     name: "Fitness-Gym",
     description:
       "This app allows users to effortlessly search for exercises by muscle group, view detailed information, and explore fitness options. ",
-    image: "/gym.jpg",
+    image: "/gym.webp",
     link: "https://react-fitness-exercise.vercel.app/",
   },
   {
     name: "Netflix Clone",
     description:
       "I built a Netflix clone using ReactJS and Firebase, combining modern design principles with functional components to deliver a seamless user experience.  ",
-    image: "/background_banner.jpg",
+    image: "/background_banner.webp",
     link: "https://react-netflixclone.vercel.app/login",
   },
   {
@@ -188,19 +188,19 @@ export const substackBlogs = [
     title: "Diffing Algorithm ",
     description: "Understand How Virtual DOM decides before Updating Real DOM",
     link: "https://advancedwebdev.substack.com/p/diffing-algorithm-for-react-devs",
-    image: "/substackImage/1.webp", // Replace with your image path or URL
+    image: "/substackImage/1.webp",
   },
   {
     title: "Intro to Virtual DOM ",
     description: "Do you know JSX is converted before showing up in web page?",
     link: "https://advancedwebdev.substack.com/p/intro-to-virtual-dom-for-react-devs",
-    image: "/substackImage/3.webp", // Replace with your image path or URL
+    image: "/substackImage/3.webp",
   },
   {
     title: "Introduction of BOM ",
     description:
       'The Browser Object Model (BOM) allows JavaScript to "communicate with" the browser.',
     link: "https://advancedwebdev.substack.com/p/introduction-of-bom-browser-object",
-    image: "/substackImage/3.jpg", // Replace with your image path or URL
+    image: "/substackImage/2.webp",
   },
 ];

@@ -1,7 +1,7 @@
 .workMain {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
-    url("/work.jpg");
+    url("/work.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,21 +16,21 @@
 .exp {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.022), rgba(0, 0, 0, 0.463)),
-    url("/work/experience.jpg");
+    url("/work/experience.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .pro {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
-    url("/work/projects.jpg");
+    url("/work/projects.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .blog {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
-    url("/work/blogs.jpg"); /* Absolute path from the public folder */
+    url("/work/blogs.webp"); /* Absolute path from the public folder */
   background-repeat: no-repeat;
   background-size: cover;
 }
