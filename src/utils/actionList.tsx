@@ -165,7 +165,7 @@ export const project: project = [
     description:
       "I built a Netflix clone using ReactJS and Firebase, combining modern design principles with functional components to deliver a seamless user experience.  ",
     image: "/background_banner.webp",
-    link: "https://react-netflixclone.vercel.app/login",
+    link: "https://react-netflixclone.vercel.app/",
   },
   {
     name: "Youtube Clone",
