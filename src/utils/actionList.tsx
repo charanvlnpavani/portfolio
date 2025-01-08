@@ -45,7 +45,7 @@ export const buttonList: buttonList = [
   },
   {
     name: "gmail",
-    link: "https://mail.google.com/mail/?view=cm&fs=1&to=pavanivlncharan@outlook.com",
+    link: "mailto:pavanivlncharan@outlook.com",
     icon: <BiLogoGmail />,
   },
   {
