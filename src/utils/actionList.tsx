@@ -80,12 +80,13 @@ export const skillList: skillList = [
 type workList = {
   name: string;
   link: string;
+  image: string;
 }[];
 
 export const workList: workList = [
-  { name: "Experience", link: "/works/" },
-  { name: "Projects", link: "/" },
-  { name: "Blogs", link: "/" },
+  { name: "Experience", link: "/works#work", image: "exp" },
+  { name: "Projects", link: "/works#project", image: "pro" },
+  { name: "Blogs", link: "/works#blog", image: "blog" },
 ];
 
 type aboutMe = {

@@ -1,5 +1,5 @@
 "use client";
-import {  experience, project, substackBlogs } from "@/utils/actionList";
+import { experience, project, substackBlogs } from "@/utils/actionList";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -101,7 +101,7 @@ const Pages = () => {
         className="status w-full h-full mt-10 px-10 py-10 top-20 md:w-[80%] md:m-32 md:p-10 border text-black m-auto"
         id="blog"
       >
-        <h1 className="text-4xl font-bold text-center mb-5 text-gray-800">
+        <h1 className="text-2xl font-bold text-center mb-5 text-gray-800">
           My Substack Posts
         </h1>
         <hr className="substack-post-embed w-full h-[2px] bg-gray-300 mb-8" />
@@ -112,7 +112,7 @@ const Pages = () => {
                 key={index}
                 className="status-item bg-white shadow-lg hover:shadow-2xl rounded-lg p-6 transition duration-300 ease-in-out flex flex-col gap-5"
               >
-                <h2 className="text-2xl font-semibold text-center text-gray-700">
+                <h2 className="text-xl font-semibold text-center text-gray-700">
                   {blog.title}
                 </h2>
                 <Image
@@ -129,9 +129,9 @@ const Pages = () => {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-center py-2.5 px-5 text-blue-600 hover:text-blue-800 underline"
+                  className="text-sm text-center py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 text-blue-600 hover:text-blue-800 underline"
                 >
-                  Read on Substack
+                  <button className="btn btn-primary">Read on Substack</button>
                 </a>
               </div>
             )

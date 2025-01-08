@@ -1,7 +1,7 @@
 .workMain {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
-    url("/work.jpg"); /* Absolute path from the public folder */
+    url("/work.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,12 +13,24 @@
   margin: auto;
   text-align: center;
 }
-.exp,
-.pro,
+.exp {
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.022), rgba(0, 0, 0, 0.463)),
+    url("/work/experience.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pro {
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
+    url("/work/projects.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .blog {
   margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.712)),
-    url("/logo.jpg"); /* Absolute path from the public folder */
+    url("/work/blogs.jpg"); /* Absolute path from the public folder */
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -2,19 +2,13 @@
 import { aboutMe, skillList } from "@/utils/actionList";
 import Image from "next/image";
 import React, { useState } from "react";
-import {
-  MdOutlineFileDownload,
-  MdOutlineFileDownloadDone,
-} from "react-icons/md";
-import Link from "next/link";
 
 const Page = () => {
-  const [download, setDownload] = useState(false);
   const [toolTip, setToolTip] = useState<string | null>(null);
   return (
-    <div className="aboutMain  ">
+    <div className="aboutMain ">
       <div
-        className="about flex flex-col gap-10 w-100% h-full py-10 top-20 md:w-[80%] md:h-[80vh] md:top-32 md:p-10 border text-black"
+        className="about flex flex-col gap-10 w-100% h-100% py-10 top-20 md:w-[80%] md:h-[80vh] md:top-32 md:p-10 border text-black"
         style={{ background: "#ffffff", opacity: "0.9" }}
       >
         {aboutMe.map((items, index) => (
@@ -56,32 +50,6 @@ const Page = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="button flex flex-row gap-3 justify-center place-items-end">
-          {!download ? (
-            <Link href="/">
-              <button
-                type="button"
-                className="cvButton border flex flex-row gap-3 justify-center place-items-end  border-orange-700 px-10 py-2 bg-orange-700 md:bg-orange-700 md:hover:bg-orange-800 md:hover:border-orange-800  md:text-white md:px-20 md:py-2 "
-                onClick={() => setDownload(true)}
-              >
-                <MdOutlineFileDownload className="text-2xl" />
-                CV
-              </button>
-            </Link>
-          ) : (
-            <Link href="/">
-              <button
-                type="button"
-                className="cvButton border flex flex-row gap-3 justify-center place-items-end  border-green-700 px-10 py-2 bg-green-700 md:bg-green-700 md:text-white md:px-20 md:py-2"
-                onClick={() => setDownload(true)}
-              >
-                <MdOutlineFileDownloadDone className="text-2xl" />
-                CV
-              </button>
-            </Link>
-          )}
         </div>
       </div>
     </div>
