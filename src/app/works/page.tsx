@@ -12,8 +12,9 @@ const Pages = () => {
   return (
     <div className="workStatus  ">
       <div
-        className="timeline-container  w-85% h-full mt-20 px-10 py-10 top-23 md:w-[80%] md:h-[100%] md:m-32 md:p-10 border text-black m-auto"
+        className="timeline-container w-85% h-full mt-20 px-10 py-10 top-23 md:w-[80%] md:h-[100%] md:m-32 md:p-10 border text-black m-auto overflow-y-auto max-h-screen"
         id="work"
+        style={{ maxHeight: "60vh" }}
       >
         <h1 className="text-2xl text-center md:text-center font-semibold text-gray-800 ">
           Work Experience
@@ -21,15 +22,21 @@ const Pages = () => {
         <hr className="w-full h-[2px] bg-gray-300 mb-8" />
         <div className="timeline flex flex-col gap-10 relative">
           {/* Vertical Line */}
-          <div className="absolute  w-[1px] h-full bg-gray-300"></div>
+          <div className="absolute w-[1px] h-full bg-gray-300"></div>
 
           {experience.map((item, index) => (
             <div
               key={index}
-              className="timeline-item flex items-start gap-6 relative"
+              className={`timeline-item flex items-start gap-6 relative ${
+                index === 0 ? "text-green-500" : ""
+              }`}
             >
               {/* Marker */}
-              <div className="timeline-marker w-1 h-5 bg-blue-500 rounded-full mt-1"></div>
+              <div
+                className={`timeline-marker w-1 h-5 ${
+                  index === 0 ? "bg-green-500" : "bg-blue-500"
+                }  mt-1`}
+              ></div>
 
               {/* Content */}
               <div className="timeline-content">
