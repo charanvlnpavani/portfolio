@@ -131,6 +131,12 @@ type experience = {
 
 export const experience: experience = [
   {
+    company: "Logpilot ",
+    role: "Frontend Developer",
+    duration: "1 month - at present",
+    description: `I am working as a Frontend Developer in Logpilot, where I am responsible for developing and maintaining the company's website. I am also working on the development of a new web application using React.js, Tailwind CSS, and collabarating with the backend team to integrate the API's.`,
+  },
+  {
     company: "EntroLabs Pvt. Ltd.",
     role: "Full Stack Developer",
     duration: "6 months",
