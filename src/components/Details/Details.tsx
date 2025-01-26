@@ -25,8 +25,8 @@ const Details = () => {
   };
 
   return (
-    <div className="details flex flex-col gap-10 px-100 pt-72 mt-24 md:mt-0 md:pt-72  md:h-[100vh]  h-[85vh]  ">
-      <div className="contentDetails text-right flex flex-col gap-3 md:flex md:flex-col md:gap-8">
+    <div className="details flex flex-col gap-10 px-100 pt-72  md:mt-0 md:pt-72  md:h-[100vh]  h-[85vh]  ">
+      <div className="contentDetails text-right flex flex-col gap-3 md:flex md:flex-col  md:gap-8">
         <div className="greeting md:font-bold md:text-xl">{getGreeting()}</div>
         <h1 className="name md:font-bold text-3xl  md:text-6xl ">
           Pavani VLN Charan

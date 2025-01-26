@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Self = () => {
   return (
-    <div className="selfMain">
+    <div className="selfMain" id="about">
       <div className="self flex flex-col gap-5 p-5 justify-center items-center top-36 md:w-[50%] md:h-[40vh] md:top-52 md:p-10 md:border md:border-1">
         <div className="title">
           <h2 className="text-3xl font-bold ">About</h2>
