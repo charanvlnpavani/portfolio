@@ -123,8 +123,8 @@ const Sidebar = () => {
         </div>
         {/* Mobile Menu */}
         {click && (
-          <div className="menuList flex flex-col gap-5 md:hidden">
-            {menuList.map((item, index) => (
+          <div className="buttonList flex flex-col gap-5 md:hidden">
+            {buttonList.map((item, index) => (
               <Link
                 href={item.link}
                 key={index}
