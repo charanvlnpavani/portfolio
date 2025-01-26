@@ -1,7 +1,12 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import { BsPersonWorkspace, BsBootstrap, BsTwitterX } from "react-icons/bs";
+import {
+  BsPersonWorkspace,
+  BsSubstack,
+  BsBootstrap,
+  BsTwitterX,
+} from "react-icons/bs";
 import {
   RiContactsFill,
   RiNextjsLine,
@@ -15,6 +20,10 @@ import { ReactNode } from "react";
 import { SiMysql, SiPostman } from "react-icons/si";
 import { TbJson } from "react-icons/tb";
 
+import Jobs from "@/app/jobs/page";
+import Project from "@/app/projects/page";
+import Blogs from "@/app/blogs/page";
+
 type navBar = {
   name: string;
   link: string;
@@ -22,8 +31,9 @@ type navBar = {
 }[];
 
 export const menuList: navBar = [
-  { name: "Works", link: "/works", icon: <BsPersonWorkspace /> },
-  { name: "About", link: "/about", icon: <RiContactsFill /> },
+  { name: "About", link: "/#about", icon: <RiContactsFill /> },
+
+  { name: "Works", link: "/#work", icon: <BsPersonWorkspace /> },
 ];
 
 type buttonList = {
@@ -52,6 +62,11 @@ export const buttonList: buttonList = [
     name: "Twitter",
     link: "https://twitter.com/charanvlnpavani",
     icon: <BsTwitterX />,
+  },
+  {
+    name: "Substack",
+    link: "https://substack.com/charanvlnpavani",
+    icon: <BsSubstack />,
   },
 ];
 
@@ -156,6 +171,7 @@ type project = {
   description: string;
   image: string;
   link: string;
+  git: string;
 }[];
 
 export const project: project = [
@@ -165,6 +181,7 @@ export const project: project = [
       "This app allows users to effortlessly search for exercises by muscle group, view detailed information, and explore fitness options. ",
     image: "/gym.webp",
     link: "https://react-fitness-exercise.vercel.app/",
+    git: "https://github.com/charanvlnpavani/react-fitness-exercise",
   },
   {
     name: "Netflix Clone",
@@ -172,6 +189,7 @@ export const project: project = [
       "I built a Netflix clone using ReactJS and Firebase, combining modern design principles with functional components to deliver a seamless user experience.  ",
     image: "/background_banner.webp",
     link: "https://react-netflixclone.vercel.app/",
+    git: "https://github.com/charanvlnpavani/react-netflix-clone",
   },
   {
     name: "Youtube Clone",
@@ -179,6 +197,7 @@ export const project: project = [
       "This project highlights my expertise in ReactJS, dynamic data fetching, responsive design, and creating user-friendly interfaces .",
     image: "/youtube.webp",
     link: "https://react-youtube-clone-omega.vercel.app/",
+    git: "https://github.com/charanvlnpavani/react-youtube-clone",
   },
 ];
 
@@ -208,5 +227,25 @@ export const substackBlogs = [
       'The Browser Object Model (BOM) allows JavaScript to "communicate with" the browser.',
     link: "https://advancedwebdev.substack.com/p/introduction-of-bom-browser-object",
     image: "/substackImage/2.webp",
+  },
+];
+
+type contentMap = {
+  name: string;
+  link: JSX.Element;
+};
+
+export const contentMap: contentMap[] = [
+  {
+    name: "Experience",
+    link: <Jobs />,
+  },
+  {
+    name: "Projects",
+    link: <Project />,
+  },
+  {
+    name: "Blogs",
+    link: <Blogs />,
   },
 ];

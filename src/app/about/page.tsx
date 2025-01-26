@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <div className="aboutMain">
       <div
-        className="about flex flex-col gap-10 w-100% h-100% py-10 top-20 md:w-[80%] md:h-[80vh] md:top-32 md:p-10 border text-black"
+        className="about flex flex-col gap-10 w-100% h-100% py-10 top-20 md:w-[70%] md:h-[80vh] md:top-32 md:p-10 border text-black"
         style={{ background: "#ffffff" }}
       >
         {aboutMe.map((items, index) => (

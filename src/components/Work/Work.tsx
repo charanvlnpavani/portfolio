@@ -1,24 +1,42 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./Work.css";
-import { workList } from "@/utils/actionList";
+
+import { contentMap } from "@/utils/actionList";
+
 const Work = () => {
+  const [activeContent, setActiveContent] = useState<number | null>(0); // Set default active index to 0
+
+  const renderContent = () => {
+    return activeContent !== null ? contentMap[activeContent]?.link : null;
+  };
+
   return (
-    <div className="workMain w-full h-auto">
-      <div className="work flex flex-col gap-5 md:gap-20 justify-center items-center w-[90%] h-full py-10 top-20 md:w-[85%] md:h-[80vh] md:top-32 md:p-10">
-        <h1 className="text-3xl font-bold">Work</h1>
-        <div className="workCards grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 md:gap-24 lg:gap-36">
-          {workList.map((items, index) => (
-            <a href={items.link} key={index}>
-              <div className="w-[40vh] h-[40vh] md:w-56 md:h-56 lg:w-[40vh] lg:h-[60vh] bg-white text-white cursor-pointer rounded-3xl p-px card-wrapper">
-                <div className={`${items.image} card-content`}>
-                  <h1 className="text-3xl font-bold flex justify-center items-center md:text-4xl pt-20 md:pt-64">
-                    {items.name}
-                  </h1>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
+    <div className="workMain w-[80%] mt-10 h-auto bg-white" id="work">
+      <div className="workStatus w-full h-full px-10 py-10 top-20 md:w-[90%] md:m-32 md:p-10  text-black m-auto   md:m-auto">
+        <h1 className="text-2xl font-bold text-center mb-5 text-gray-800">
+          My Works
+        </h1>
+        <hr className="w-full h-[2px] bg-gray-300 mb-8" />
+      </div>
+      <div className="header flex flex-col gap-2 md:flex md:flex-row  md:gap-2 justify-around items-center w-full h-20 bg-white">
+        {/* Top buttons */}
+        {contentMap.map((item, index) => (
+          <div
+            key={index}
+            className={`button w-32 h-10 bg-orange-500 rounded-md flex flex-col md:flex md:flex-row justify-center items-center cursor-pointer ${
+              activeContent === index ? "bg-orange-700" : "hover:bg-orange-700"
+            }`}
+            onClick={() => setActiveContent(index)} // Set active content index
+          >
+            {item.name}
+          </div>
+        ))}
+      </div>
+
+      <div className="content flex flex-col justify-start items-center w-[90%] mx-auto py-10">
+        {/* Render content dynamically */}
+        {renderContent()}
       </div>
     </div>
   );
