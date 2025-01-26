@@ -6,9 +6,10 @@ import React, { useState } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 
-const Sidebar = () => {
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [active, setActive] = useState(-1);
+  const [social, setSocial] = useState(-1);
 
   return (
     <div
@@ -80,9 +81,9 @@ const Sidebar = () => {
                   setActive(index);
                   setClick(false); // Close menu on click
                 }}
-                className={`relative group cursor-pointer flex gap-2 items-center text-black py-2  rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
+                className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
                   active === index
-                    ? "active border-l-4 border-gray-500 text-gray-500"
+                    ? "active border-l-4 border-orange-500 text-orange-500"
                     : ""
                 }`}
               >
@@ -101,22 +102,22 @@ const Sidebar = () => {
       {/* Desktop Menu */}
       <div className="flex flex-col gap-3 justify-end h-full">
         <div className="buttonList hidden md:flex flex-col gap-5">
-          {buttonList.map((item, index) => (
+          {buttonList.map((sm, index) => (
             <Link
-              href={item.link}
+              href={sm.link}
               key={index}
-              onClick={() => setActive(index)}
+              onClick={() => setSocial(index)}
               className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg  hover:text-orange-500 transition duration-300 ease-in-out ${
-                active === index
+                social === index
                   ? "active border-l-4 border-orange-500 text-orange-500"
                   : ""
               }`}
             >
-              <div className="icon text-lg">{item.icon}</div>
+              <div className="icon text-lg">{sm.icon}</div>
 
               {/* Tooltip */}
               <span className="tooltip-text absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap p-2 bg-black text-white rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                {item.name}
+                {sm.name}
               </span>
             </Link>
           ))}
@@ -124,25 +125,25 @@ const Sidebar = () => {
         {/* Mobile Menu */}
         {click && (
           <div className="buttonList flex flex-col gap-5 md:hidden">
-            {buttonList.map((item, index) => (
+            {buttonList.map((sm, index) => (
               <Link
-                href={item.link}
+                href={sm.link}
                 key={index}
                 onClick={() => {
-                  setActive(index);
+                  setSocial(index);
                   setClick(false); // Close menu on click
                 }}
                 className={`relative group cursor-pointer flex gap-2 items-center text-black py-2  rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
-                  active === index
+                  social === index
                     ? "active border-l-4 border-gray-500 text-gray-500"
                     : ""
                 }`}
               >
-                <div className="icon text-lg">{item.icon}</div>
+                <div className="icon text-lg">{sm.icon}</div>
 
                 {/* Tooltip */}
                 <span className="tooltip-text absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap p-2 bg-black text-white rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  {item.name}
+                  {sm.name}
                 </span>
               </Link>
             ))}
@@ -153,4 +154,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;
