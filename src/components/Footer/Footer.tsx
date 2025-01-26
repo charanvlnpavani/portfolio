@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="footerMain flex gap-10 align-center justify-center bg-black text-white w-full h-[10vh] px-10 pt-10 ">
+    <div className="footerMain flex gap-10 align-center justify-center bg-white text-orange-600 w-full h-[10vh] px-10 pt-10  ">
       <div className="footer flex flex-col gap-5 md:flex md:flex-col md:gap-8 ">
         <div className="content">
           <h1 className="text-3xl font-bold justify-center items-center md:text-4xl">
@@ -31,7 +31,7 @@ const Footer = () => {
             <Link href="/">
               <button
                 type="button"
-                className="cvButton border flex flex-row gap-3 justify-center place-items-end  border-orange-700 px-10 py-2 bg-orange-700 md:bg-orange-700 md:hover:bg-orange-800 md:hover:border-orange-800  md:text-white md:px-20 md:py-2 "
+                className="cvButton border flex flex-row gap-3 justify-center place-items-end  border-orange-700 px-10 py-2 text-white bg-orange-700 md:bg-orange-700 md:hover:bg-orange-800 md:hover:border-orange-800  md:text-white md:px-20 md:py-2 "
                 onClick={handleDownload}
               >
                 <MdOutlineFileDownload className="text-2xl" />

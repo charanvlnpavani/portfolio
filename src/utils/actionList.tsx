@@ -117,19 +117,24 @@ export const aboutMe: aboutMe = [
     content: (
       <>
         I living in <b> Bangalore</b>. I am a passionate{" "}
-        <b> Frontend Developer </b>with over <b>2 years of experience </b>
-        specializing in <b>React.js, JavaScript, and modern web technologies</b>
-        . My journey in web development began with a <b>strong foundation</b> in
-        HTML, CSS, PHP, and MySQL, and has since evolved into a focused
-        expertise in{" "}
-        <b>
+        <b className="text-orange-600"> Frontend Developer </b>with over{" "}
+        <b className="text-orange-600">2 years of experience </b>
+        specializing in{" "}
+        <b className="text-orange-600">
+          React.js, JavaScript, and modern web technologies
+        </b>
+        . My journey in web development began with a{" "}
+        <b className="text-orange-600">strong foundation</b> in HTML, CSS, PHP,
+        and MySQL, and has since evolved into a focused expertise in{" "}
+        <b className="text-orange-600">
           frontend technologies, user-centered design, and creating engaging,
           responsive web applications
         </b>
         . My goal is to leverage my skills and knowledge to make a{" "}
-        <b>positive impact </b>in the world of web development, and to
-        contribute to
-        <b> innovative projects</b> that drive user engagement and success.
+        <b className="text-orange-600">positive impact </b>in the world of web
+        development, and to contribute to
+        <b className="text-orange-600"> innovative projects</b> that drive user
+        engagement and success.
       </>
     ),
     image: "/logo.webp",

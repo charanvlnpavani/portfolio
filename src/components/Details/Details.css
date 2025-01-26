@@ -1,6 +1,5 @@
 .details {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.332), rgba(0, 0, 0, 0.712)),
-    url("/img2.webp"); /* Absolute path from the public folder */
+  background-image: url("/img2.webp"); /* Absolute path from the public folder */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
