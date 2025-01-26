@@ -5,9 +5,9 @@ import Link from "next/link";
 const Self = () => {
   return (
     <div className="selfMain" id="about">
-      <div className="self flex flex-col gap-5 p-5 justify-center items-center top-36 md:w-[50%] md:h-[40vh] md:top-52 md:p-10 md:border md:border-1">
+      <div className="self flex flex-col gap-5 p-5 justify-center items-center top-36 md:w-[50%] md:h-[40vh] md:top-52 md:p-10 md:border md:border-1 text-black">
         <div className="title">
-          <h2 className="text-3xl font-bold ">About</h2>
+          <h2 className="text-3xl font-bold text-orange-600 ">About</h2>
         </div>
         <div className="content flex flex-col gap-5 md:flex md:flex-col md:gap-8">
           <p className="text-center">

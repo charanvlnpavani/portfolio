@@ -13,8 +13,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`sidebar-container flex flex-col gap-5 justify-normal px-8 py-10 fixed top-0 left-0 w-24 h-screen  md:shadow-md text-black md:bg-gray-50 md:w-32 
-        ${click ? "bg-gray-100" : "bg-transparent"} ${
+      className={`sidebar-container flex flex-col gap-5 justify-normal px-8 py-10 fixed top-0 left-0 w-24 h-screen  md:shadow-md text-black md:bg-white md:w-32 
+        ${click ? "bg-white" : "bg-transparent"} ${
         click ? "shadow-lg" : "shadow-none"
       } `}
       style={{ zIndex: 1000 }}
@@ -23,14 +23,14 @@ const Navbar = () => {
       <div>
         {!click ? (
           <button
-            className="menuIcon font-bold text-2xl bg-white rounded-md p-2 cursor-pointer text-black md:hidden"
+            className="menuIcon font-bold text-xl bg-orange-600 rounded-md p-2 cursor-pointer text-white md:hidden"
             onClick={() => setClick(true)}
           >
             <CiMenuKebab />
           </button>
         ) : (
           <button
-            className="menuIcon font-bold text-2xl cursor-pointer text-black md:hidden"
+            className="menuIcon font-bold text-xl cursor-pointer  bg-orange-600 rounded-md p-2 text-white md:hidden"
             onClick={() => setClick(false)}
           >
             <RxCross1 />
@@ -55,7 +55,7 @@ const Navbar = () => {
               href={item.link}
               key={index}
               onClick={() => setActive(index)}
-              className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
+              className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg  hover:text-orange-600 transition duration-300 ease-in-out ${
                 active === index
                   ? "active border-l-4 border-orange-500 text-orange-500"
                   : ""
@@ -81,7 +81,7 @@ const Navbar = () => {
                   setActive(index);
                   setClick(false); // Close menu on click
                 }}
-                className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
+                className={`relative group cursor-pointer flex gap-2 items-center text-black py-2  rounded-lg hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out ${
                   active === index
                     ? "active border-l-4 border-orange-500 text-orange-500"
                     : ""
@@ -107,7 +107,7 @@ const Navbar = () => {
               href={sm.link}
               key={index}
               onClick={() => setSocial(index)}
-              className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 px-5 rounded-lg  hover:text-orange-500 transition duration-300 ease-in-out ${
+              className={`relative group cursor-pointer flex gap-2 items-center text-black py-2 md:px-5 rounded-lg  hover:text-orange-500 transition duration-300 ease-in-out ${
                 social === index
                   ? "active border-l-4 border-orange-500 text-orange-500"
                   : ""

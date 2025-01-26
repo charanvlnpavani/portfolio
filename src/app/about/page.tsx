@@ -26,13 +26,16 @@ const Page = () => {
               />
             </div>
             <div className="content flex flex-col gap-5 px-5 py-4 md:flex-grow h-full">
-              <h1 className="text-3xl font-bold">{items.name}</h1>
-              <h3>{items.role}</h3>
+              <h1 className="text-3xl font-bold text-orange-600">
+                {items.name}
+              </h1>
+              <h3 className="text-orange-600">{items.role}</h3>
               <p className="text-justify">{items.content}</p>
             </div>
           </div>
         ))}
         <div className="skillMain w-full md:w-[80%] lg:w-[60%] text-center border p-5 mx-auto rounded-md">
+          <h1 className="text-3xl font-bold text-orange-600 pb-5">Skills</h1>
           <div className="skills flex flex-wrap justify-center gap-5 md:gap-8 text-xl md:text-3xl">
             {skillList.map((items, index) => (
               <div

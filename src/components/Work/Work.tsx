@@ -14,7 +14,7 @@ const Work = () => {
   return (
     <div className="workMain w-[80%] mt-10 h-auto bg-white" id="work">
       <div className="workStatus w-full h-full px-10 py-10 top-20 md:w-[90%] md:m-32 md:p-10  text-black m-auto   md:m-auto">
-        <h1 className="text-2xl font-bold text-center mb-5 text-gray-800">
+        <h1 className="text-2xl font-bold text-center mb-5 text-gray-800 text-orange-600">
           My Works
         </h1>
         <hr className="w-full h-[2px] bg-gray-300 mb-8" />
