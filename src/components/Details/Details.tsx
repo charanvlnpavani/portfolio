@@ -11,8 +11,7 @@ import {
 const Details = () => {
   const [download, setDownload] = useState(false);
   const [text, setText] = useState("");
-  const fullText = "Frontend Developer";
-
+  const fullText = "  Frontend Developer";
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -33,25 +32,25 @@ const Details = () => {
     if (hour < 12)
       return (
         <>
-          <span className="text-2xl md:text-4xl text-orange-600">M</span>orning
+          <span className="text-2xl md:text-3xl text-black">M</span>orning
         </>
       );
     if (hour < 17)
       return (
         <>
-          <span className="text-2xl md:text-4xl text-orange-600">A</span>
+          <span className="text-2xl md:text-3xl text-black">A</span>
           fternoon
         </>
       );
     if (hour < 20)
       return (
         <>
-          <span className="text-2xl md:text-4xl text-orange-600">E</span>vening
+          <span className="text-2xl md:text-3xl text-black">E</span>vening
         </>
       );
     return (
       <>
-        <span className="text-2xl md:text-4xl text-orange-600">N</span>ight
+        <span className="text-2xl md:text-3xl text-black">N</span>ight
       </>
     );
   };
@@ -64,18 +63,19 @@ const Details = () => {
     <div className="details flex flex-col gap-10 px-100 pt-20  md:mt-0 md:pt-72  md:h-[100vh]  h-[85vh]  ">
       <div className="contentDetails text-right flex flex-col gap-3 md:flex md:flex-col  md:gap-8  text-black">
         <div className="greeting md:font-bold md:text-xl ">
-          <span className="text-2xl md:text-4xl text-orange-600">Hi 👋, G</span>
+          <span className="text-2xl md:text-3xl text-black">Hi 👋 G</span>
           ood {getGreeting()}
-          <span className="text-2xl md:text-4xl text-orange-600">😎</span>
         </div>
-        <h1 className="name md:font-bold text-2xl  md:text-4xl pt-12 ">
+        <h1 className="name md:font-bold text-2xl  md:text-5xl pt-12 ">
           <span className="text-3xl md:text-6xl text-orange-600">P</span>avani
           <span className="text-3xl md:text-6xl text-orange-600"> VLN </span>
           <span className="text-3xl md:text-6xl text-orange-600">C</span>haran
         </h1>
         <h2 className="job md:font-bold md:text-3xl text-xl ">
           {text}
-          <span className="cursor text-orange-600">|</span>{" "}
+          <span className="cursor text-orange-600">
+            {text.length < fullText.length - 1 ? "|" : ""}
+          </span>{" "}
           {/* Optional blinking cursor */}
         </h2>
         <h3 className="location md:font-bold md:text-xl flex flex-row  justify-end flex-end place-items-end gap-2 ">
