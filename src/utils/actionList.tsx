@@ -113,28 +113,18 @@ type aboutMe = {
 
 export const aboutMe: aboutMe = [
   {
-    name: "Pavani VLN Charan",
+    name: (`Pavani VLN Charan`),
     content: (
       <>
         I living in <b> Bangalore</b>. I am a passionate{" "}
-        <b className="text-orange-600"> Frontend Developer </b>with over{" "}
-        <b className="text-orange-600">2 years of experience </b>
-        specializing in{" "}
-        <b className="text-orange-600">
-          React.js, JavaScript, and modern web technologies
-        </b>
-        . My journey in web development began with a{" "}
-        <b className="text-orange-600">strong foundation</b> in HTML, CSS, PHP,
-        and MySQL, and has since evolved into a focused expertise in{" "}
-        <b className="text-orange-600">
-          frontend technologies, user-centered design, and creating engaging,
-          responsive web applications
-        </b>
-        . My goal is to leverage my skills and knowledge to make a{" "}
-        <b className="text-orange-600">positive impact </b>in the world of web
-        development, and to contribute to
-        <b className="text-orange-600"> innovative projects</b> that drive user
-        engagement and success.
+        <b>Frontend Developer </b>with over 2 years of experience specializing
+        in React.js, JavaScript, and modern web technologies . My journey in web
+        development began with a strong foundation in HTML, CSS, PHP, and MySQL,
+        and has since evolved into a focused expertise in frontend technologies,
+        user-centered design, and creating engaging, responsive web applications
+        . My goal is to leverage my skills and knowledge to make a positive
+        impact in the world of web development, and to contribute to innovative
+        projects that drive user engagement and success.
       </>
     ),
     image: "/logo.webp",
